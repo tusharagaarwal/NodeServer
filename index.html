@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-	<title>HTML Tutorial 1</title>
+	<title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
 	<style>
 	* {
 	margin: 0px;
@@ -26,14 +28,17 @@ body {
 #big_wrapper {
 	max-width: 1000px;
 	margin: 20px 0px;
+    margin-top: 0px;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;  /* Similar to block and inline */
 	-webkit-box-flex: 1;  /* Allows the website to grow and shrink, to deny flexibility set cvalue to 0 */
 }
 #top_header {
-	background: yellow;
-	border: 3px solid black;
+	background: blue;
+	border: 1px solid black;
 	padding: 20px;
+    font: bold 20px 'Ubuntu Light';
+    color: whitesmoke;
 }
 #top_menu {
 	background: blue;
@@ -83,42 +88,69 @@ background: #66CCCC;
 <body>
 	<div id="big_wrapper">
 		<header id="top_header">
-			<h1>Welcome to thenewboston</h1>
+			<h1 style="font: bold 20px 'Ubuntu Light'">Expense Tracker - Personal</h1>
 		</header>
 		
-		<nav id="top_menu">
+		<!--<nav id="top_menu">
 			<ul>
 				<li>Home</li>
 				<li>Tutorial</li>
 				<li>About</li>
 				<li>Contact</li>
 			</ul>
-		</nav>
+		</nav>-->
+        <nav></nav>
 		
 		<div id="new_div">
 			<section id="main_section">
-				<article>
-					<header>
-						<hgroup>
-							<h1>Slythrines Rock!</h1>
-							<h2>Welcome Mudbloods!</h2>
-						</hgroup>
-					</header>
-					<p>Some random bull**** so that you muggles have time to waste!</p>
-					<footer>
-						<p>Written by - Draco Malfoy</p>
-					</footer>
+				<article style="background: none; border: none; box-shadow: 0px 0px 5px blue;">
+					<!-- login form -->
+                   <div class="bootstrap-iso">
+                     <div class="container-fluid">
+                      <div class="row">
+                       <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form action="/" method="get">
+                         <div class="form-group ">
+                          <label class="control-label requiredField" for="username">
+                           Username
+                           <span class="asteriskField">
+                            *
+                           </span>
+                          </label>
+                          <input class="form-control" id="username" required name="username" placeholder="Username" type="text"/>
+                         </div>
+                         <div class="form-group ">
+                          <label class="control-label requiredField" for="password">
+                           Password
+                           <span class="asteriskField">
+                            *
+                           </span>
+                          </label>
+                          <input class="form-control" id="password" required name="password" type="password"/>
+                         </div>
+                         <div class="form-group">
+                          <div>
+                           <button class="btn btn-primary " name="submit" type="submit">
+                            Submit
+                           </button>
+                          </div>
+                         </div>
+                        </form>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
 				</article>
 				
 				<article>
 					<header>
 						<hgroup>
-							<h1>Gryffindor Rock!</h1>
+							<h1 style="font: 14px 'Ubuntu Light';font-weight:100;">Login Instructions!</h1>
 						</hgroup>
 					</header>
-					<p>Some random bull**** so that you muggles have time to waste!</p>
+					<p style="font: 12px 'Ubuntu Light';font-weight:100;">Please do not waste time and bandwidth of the network by tring to login into the page. For access please contact the owner!</p>
 					<footer>
-						<p>Written by - Dracy Malfoy</p>
+						<p style="font: 12px 'Ubuntu Light';font-weight:100;">ADMIN</p>
 					</footer>
 				</article>
 			</section>
@@ -130,7 +162,7 @@ background: #66CCCC;
 		</div>
 		
 		<footer id="footer">
-			Copyright Tushar Agarwal - 2016
+			Copyright 2016 - Tushar Agarwal&copy;
 		</footer>
 	</div>
 </body>	

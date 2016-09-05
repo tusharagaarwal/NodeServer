@@ -1,15 +1,12 @@
 function dispatch(path, handle){
-try{
 	console.log("Dispatching " + path);
 	if(typeof handle[path] === 'function'){
-		return handle[path](path);
+		console.log(typeof handle['path']);
+		return handle[path]();
 	}
 	else{
-		return handle['/404']();
+		return '404 not found';
 	}
-} catch (ex) {
-	console.log(ex);
-}
 }
 
 exports.dispatch = dispatch;

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 'Ubuntu Condensed';
+}
+
+body {
+    max-width: 1000px;
+    width:100%;
+    margin: auto;
+}
+
+body > header {
+    padding:10px;
+    background: blue;
+    color: white;
+    font: 20px 'Ubuntu Condensed';
+    border-bottom: solid thick gray;
+}
+
+body > nav {
+    
+}
+
+body > section {
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+
+body > section > section > article {
+    padding : 10px;
+    border : solid thick appworkspace;
+    background: gray;
+    color : white;
+    box-shadow: 0px 0px 5px black;
+    margin-bottom: 5px;
+    float: left;
+    display: -webkit-box;
+}
+
+body > section > aside {
+    float: left;
+    background: blue;
+    padding: 10px;
+    width: 170px;
+    margin-left: 5px;
+    border: solid thick gray;
+    display: -webkit-box;
+}
+
+body > section > aside > ul {
+    list-style: none;
+}
+
+body > section > aside > ul > li {
+    font: 16px 'Ubuntu';
+    margin-bottom: 5px;
+}
+
+body > section > aside > ul > li > a {
+    color: white;
+    font: 14px;
+    text-decoration: none;
+}
+
+body > footer {
+    clear: both;
+    text-align: center;
+    border-top: solid thick gray;
+    padding: 10px;
+    background: blue;
+    color: white;
+}
