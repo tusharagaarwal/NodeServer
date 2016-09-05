@@ -1,20 +1,7 @@
 
 
-# myServer
 
-
-
-## Usage
-
-
-
-## Developing
-
-
-
-### Tools
-
-Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)
- ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))   
-
-Nodeclipse is free open-source project that grows with your contributions.
+2. `npm install http-server -g` to get [simple HTTP file server](https://github.com/nodeapps/http-server),
+ you may want to use Apache or any other
+3. `http-server . -p 8010`
+4. Open `http://localhost:8010/` to check if you see home page
