@@ -32,6 +32,7 @@ var reqListener = function (request, response) {
 				});*/
 			}
 			else{
+				data = data.join("<br>");
 				response.write('<h1>Index of /</h1><br>' + data + footer);
 				response.end();
 			}
@@ -42,12 +43,25 @@ var reqListener = function (request, response) {
 		var cmd = 'dir /b';
 		exec(cmd, function(error, stdout, strerr){
 			data = stdout;
-			data = data.split('\r\n');
+			data = data.split("\r\n");
 			var fileloc = data.indexOf(path.basename(pathn));
 			console.log('\nRequest for ' + path.basename(pathn));
 			if(fileloc!=-1){
-				var rstream = fs.createReadStream('./' + path.basename(pathn));
-				rstream.pipe(response);
+				if(!fs.lstatSync('./' + pathn).isDirectory()){
+					var rstream = fs.createReadStream('./' + pathn);
+					rstream.pipe(response);
+				}
+				else {
+					cmd = 'dir ' + pathn.substr(1) + ' /b';
+					exec(cmd, function(error, stdout, stderr){
+						data = stdout;
+						data = data.split('\r\n');
+						data = data.join('<br/>');
+						console.log(cmd +':'+data);
+						response.write('<h1>Index of ' + pathn + '</h1><br>' + data + footer);
+						response.end();
+					});
+				}
 			}
 			else {
 				response.write('<h1>404 Not Found</h1>' + footer);
