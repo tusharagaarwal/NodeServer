@@ -4,6 +4,7 @@ var fs = require('fs');
 var exec = require('child_process').exec;
 var path = require('path');
 var port = 12311;
+var datahandler = require('./datahandler.js');
 
 var reqListener = function (request, response) {
 	console.log("Incoming request from: " + request.connection.remoteAddress);
@@ -37,6 +38,35 @@ var reqListener = function (request, response) {
 				response.end();
 			}
 		});
+	}
+	else if(pathn == '/login'){
+		// data submit from the login.html
+		/*
+		else if (path == '/getresponse') {
+	
+		
+		var query = url.parse(request.url).query;
+		var username = querystring.parse(query)['username'];
+		var email = querystring.parse(query)['email'];
+		response.write("Username: " + username + " and email: " + email);
+		response.end();
+	}
+	else if (path == '/postresponse') {
+	
+		var data1 = '';
+		request.on('data', function(chunk) {
+			console.log(chunk);
+			data1 += chunk;
+		});
+		request.on('end', function() {
+			qs = querystring.parse(data1);
+			name = qs['username'];
+			email = qs['email'];
+			response.write("Username: " + name + " post email: " + email);
+		});
+		
+	}
+		*/
 	}
 	else{
 		var data = '';
