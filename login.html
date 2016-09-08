@@ -1,0 +1,99 @@
+<!DOCtype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<title>Expense Tracker - Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+	<link rel="shortcut icon" href="./favicon.ico"/>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./style.css" type="text/css">
+</head>
+<body>
+	<div id="big_wrapper">
+		<header id="top_header" class="page-header" style = "margin:0 auto;">
+			<h1 style="font-size:23px;"><i class="fa fa-university" aria-hidden="true"></i> Expense Tracker <span class="label label-default"> Personal</span></h1>
+		</header>
+		
+		<!--<nav id="top_menu">
+			<ul>
+				<li>Home</li>
+				<li>Tutorial</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>-->
+        <nav></nav>
+		
+		<div id="new_div">
+			<section id="main_section">
+				<article style="background: none; border: none; box-shadow: 0px 0px 5px blue;">
+					<!-- login form -->
+                   <div class="bootstrap-iso">
+                     <div class="container-fluid">
+                      <div class="row">
+                       <div class="col-md-6 col-sm-6 col-xs-12">
+                        <form action="/login" method="get">
+                         <div class="form-group ">
+                          <label class="control-label requiredField" for="username">
+                           Username
+                           <span class="asteriskField">
+                            *
+                           </span>
+                          </label>
+						  
+							<input class="form-control" id="username" required name="username" placeholder="Username" type="text"/>
+                         </div>
+                         <div class="form-group ">
+                          <label class="control-label requiredField" for="password">
+                           Password
+                           <span class="asteriskField">
+                            *
+                           </span>
+                          </label>
+						  
+							<input class="form-control" id="password" required name="password" type="password"/>
+						  
+                         </div>
+                         <div class="form-group">
+                          <div>
+                           <button class="btn btn-primary " name="submit" type="submit">
+                            Submit
+                           </button>
+                          </div>
+                         </div>
+                        </form>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+				</article>
+				
+				<article>
+					<header>
+						<hgroup>
+							<h1 style="font: 14px 'Ubuntu Light';font-weight:100;">Login Instructions!</h1>
+						</hgroup>
+					</header>
+					<p style="font: 12px 'Ubuntu Light';font-weight:100;">Please do not waste time and bandwidth of the network by tring to login into the page. For access please contact the owner!</p>
+					<footer>
+						<p style="font: 12px 'Ubuntu Light';font-weight:100;">ADMIN</p>
+					</footer>
+				</article>
+			</section>
+
+			<!--<aside id="side_news">
+				<h4>News</h4>
+				Tushar Rocks!
+			</aside>-->
+		</div>
+		
+		<footer id="footer">
+			Copyright 2016 - Tushar Agarwal&copy;
+		</footer>
+	</div>
+	
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+</body>	
+</html>
