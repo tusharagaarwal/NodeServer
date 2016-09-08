@@ -57,6 +57,8 @@ var reqListener = function (request, response) {
 				var obj = JSON.parse(data);
 				if(typeof obj.users[username] == 'object'){
 					if(obj.users[username].password == password){
+						// create session for the user
+						
 						// valid credentials redirect to home according to role
 						var role = obj.users[username].role;
 						if(role == "admin"){
@@ -84,17 +86,9 @@ var reqListener = function (request, response) {
 				response.end();
 			}
 		});
-		// data submit from the login.html
+		// data submit from the login.html for post
 		/*
-		else if (path == '/getresponse') {
-	
 		
-		var query = url.parse(request.url).query;
-		var username = querystring.parse(query)['username'];
-		var email = querystring.parse(query)['email'];
-		response.write("Username: " + username + " and email: " + email);
-		response.end();
-	}
 	else if (path == '/postresponse') {
 	
 		var data1 = '';

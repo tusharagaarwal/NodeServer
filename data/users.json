@@ -8,6 +8,11 @@
 		"user": {
 			"password": "test",
 			"role": "user"
+		},
+		
+		"tushar": {
+			"password": "test",
+			"role": "user"
 		}
 	}
 }
